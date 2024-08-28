@@ -20,3 +20,12 @@ app.get('/', (req, res) =>{
         </form>
         `)
 })
+
+app.post('/upload', upload.single('file'), (req, res) => {
+    if (req.file) {
+        res.status(200).send('File uploaded')
+    } else {
+        req.status(400).send('file upload failed')
+    }
+})
+
