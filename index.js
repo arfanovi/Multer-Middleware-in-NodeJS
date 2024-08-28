@@ -29,3 +29,8 @@ app.post('/upload', upload.single('file'), (req, res) => {
     }
 })
 
+
+
+app.listen(PORT, () =>{
+    console.log('Server is Running ')
+})
